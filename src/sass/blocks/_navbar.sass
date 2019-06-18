@@ -1,0 +1,65 @@
+.navbar
+  &-block
+    display: flex
+    margin-bottom: 5px
+  &__logo
+    display: flex
+    flex-direction: column
+    text-align: center
+    text-transform: uppercase
+    font-family: 'Proxima Nova Regular'
+    font-size: 15px
+    font-weight: bold
+    line-height: 15px
+    font-style: italic
+    margin-right: 136px
+  &__menu
+    &-list
+      list-style: none
+      margin: 0
+      display: flex
+      padding: 0
+      margin-top: 14px
+      width: 511px
+      justify-content: space-between
+      margin-right: 119px
+      & li+li
+        &:before
+          content: url('../img/navbar/line.png')
+          margin-right: 29px
+      & a
+        text-decoration: none
+        font-size: 16px
+        font-family: 'Proxima Nova Regular'
+        font-weight: 500
+        line-height: 40px
+        color: $color-menu
+        &:hover
+          color: $color-main
+          border-bottom: 2px solid $color-main
+  &__info
+    display: flex
+  &__contacts
+    margin-top: 20px
+    margin-right: 43px
+    font-family: 'Proxima Nova Regular'
+    font-size: 18px
+    font-weight: 700
+    &-bold
+      font-weight: bold
+      font-family: 'Proxima Nova Extra Bold'
+    & a
+      text-decoration: none
+      color: $color-menu
+  &__button
+    padding: 8px 14px 7px 15px
+    font-family: 'Proxima Nova Regular'
+    font-size: 14px
+    font-weight: bold
+    color: $color-text-button
+    background: $color-main
+    border: none
+    outline: none
+    margin: auto
+    &:hover
+      cursor: pointer
