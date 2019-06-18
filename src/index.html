@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>LOGO</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
@@ -43,32 +45,62 @@
   <!-- /.navbar -->
 
   <section class="section hero">
-    <div class="slider-hero">
-      <div class="slider__item">
-        <img src="img/hero/boiler.jpg" alt="бойлерная">
-      </div>
-      <div class="slider__item">
-        <img src="img/hero/boiler.jpg" alt="бойлерная">
-      </div>
-      <div class="slider__item">
-        <img src="img/hero/boiler.jpg" alt="бойлерная">
-      </div>
-      <div class="slider__item">
-        <img src="img/hero/boiler.jpg" alt="бойлерная">
-      </div>
-    </div>
-    <div class="container">
-      <div class="hero-block">
-        <div class="hero__text">
-          <span>Наша бригада  по монтированию отопления и сантехники</span>
-          <span>вызов по Москве и Московской области</span>
-          <span>Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</span>
+    <div class="nav-hero__slider-hero">
+      <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
+        <div class="container">
+          <div class="nav-hero__text">
+            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
+            <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
+          </div>
+          <button class="button hero__button">подробнее</button>
         </div>
-        <button class="button hero__button">подробнее</button>
+      </div>
+      <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
+        <div class="container">
+          <div class="nav-hero__text">
+            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
+            <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
+          </div>
+          <button class="button hero__button">подробнее</button>
+        </div>
+      </div>
+      <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
+        <div class="container">
+          <div class="nav-hero__text">
+            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
+            <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
+          </div>
+          <button class="button hero__button">подробнее</button>
+        </div>
+      </div>
+      <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
+        <div class="container">
+          <div class="nav-hero__text">
+            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
+            <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
+          </div>
+          <button class="button hero__button">подробнее</button>
+        </div>
       </div>
     </div>
-
   </section>
 
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.nav-hero__slider-hero').slick({
+        dots: true,
+        infinite: true,
+        prevArrow: ('.btn'),
+        nextArrow: ('.btn')
+      });
+    });
+  </script>
 </body>
 </html>
