@@ -1,0 +1,68 @@
+.price
+  &__button
+    font-family: 'Proxima Nova Regular'
+    font-size: 28px
+    font-weight: bold
+    line-height: 28px
+    text-transform: uppercase
+    color: #020202
+    padding: 15px 66px 15px 68px
+    border: none
+    outline: none
+    background: $color-main
+    margin-bottom: 75px
+    margin-top: -25px
+    margin-left: -30px
+  &-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__item
+    width: 377px
+    height: 236px
+    position: relative
+    margin-bottom: 21px
+    & .active
+      display: none
+    &:hover .default
+      display: none
+    &:hover .active
+      display: inline
+    &-text
+      position: absolute
+      font-family: 'Proxima Nova Regular'
+      font-size: 20px
+      font-weight: 400
+      line-height: 26px
+      text-align: center
+      width: 100%
+      top: 18px
+      color: #fcfafa
+      & .active
+        position: relative
+        color: $color-menu
+        top: 37px
+        left: 5px
+      &:hover .default
+        display: none
+      &:hover .active
+        display: inline
+    &-button
+      position: absolute
+      font-family: 'Proxima Nova Regular'
+      font-size: 15px
+      font-weight: 400
+      line-height: 15.93px
+      text-transform: uppercase
+      color: $color-menu
+      padding: 10px 19px 
+      background: $color-main
+      bottom: 68px
+      border: none
+      outline: none
+      left: 32%
+      margin-right: 30%
+      &.active
+        color: #fdfcfc
+        background: $color-menu
+        padding: 10px 36px 

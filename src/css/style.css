@@ -223,4 +223,100 @@ img {
 .slick-dots li.slick-active {
   content: url("../img/hero/btn-active.png");
 }
+
+.price__button {
+  font-family: 'Proxima Nova Regular';
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #020202;
+  padding: 15px 66px 15px 68px;
+  border: none;
+  outline: none;
+  background: #ffc800;
+  margin-bottom: 75px;
+  margin-top: -25px;
+  margin-left: -30px;
+}
+
+.price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price__item {
+  width: 377px;
+  height: 236px;
+  position: relative;
+  margin-bottom: 21px;
+}
+
+.price__item .active {
+  display: none;
+}
+
+.price__item:hover .default {
+  display: none;
+}
+
+.price__item:hover .active {
+  display: inline;
+}
+
+.price__item-text {
+  position: absolute;
+  font-family: 'Proxima Nova Regular';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+  width: 100%;
+  top: 18px;
+  color: #fcfafa;
+}
+
+.price__item-text .active {
+  position: relative;
+  color: #000000;
+  top: 37px;
+  left: 5px;
+}
+
+.price__item-text:hover .default {
+  display: none;
+}
+
+.price__item-text:hover .active {
+  display: inline;
+}
+
+.price__item-button {
+  position: absolute;
+  font-family: 'Proxima Nova Regular';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15.93px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 10px 19px;
+  background: #ffc800;
+  bottom: 68px;
+  border: none;
+  outline: none;
+  left: 32%;
+  margin-right: 30%;
+}
+
+.price__item-button.active {
+  color: #fdfcfc;
+  background: #000000;
+  padding: 10px 36px;
+}
 /*# sourceMappingURL=style.css.map */
