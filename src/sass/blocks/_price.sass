@@ -23,6 +23,12 @@
     height: 236px
     position: relative
     margin-bottom: 21px
+    & img
+      -webkit-filter: grayscale(100%)
+      filter: grayscale(100%)
+      &:hover
+        -webkit-filter: grayscale(0)
+        filter: grayscale(0)
     & .active
       display: none
     &:hover .default
@@ -67,3 +73,4 @@
         color: #fdfcfc
         background: $color-menu
         padding: 10px 36px 
+        cursor: pointer

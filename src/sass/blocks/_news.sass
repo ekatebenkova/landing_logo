@@ -1,0 +1,83 @@
+.news
+  margin-bottom: 72px
+  &__button
+    font-family: 'Proxima Nova Regular'
+    font-size: 28px
+    font-weight: bold
+    line-height: 28px
+    text-transform: uppercase
+    color: #020202
+    padding: 15px 54px 15px 55px
+    border: none
+    outline: none
+    background: $color-main
+    margin-bottom: 58px
+    margin-top: -25px
+    margin-left: -30px
+  &-block
+    display: flex
+    justify-content: space-between
+    &__item
+      display: flex
+      width: 378px
+      flex-direction: column
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+      &-text
+        display: flex
+        justify-content: space-between
+        & p
+          display: flex
+          &.title
+            width: 200px
+            font-family: 'Proxima Nova Regular'
+            color: #020202
+            font-size: 20px
+            font-weight: 700
+            line-height: 28px
+            text-transform: uppercase
+            margin-top: 22px
+            margin-bottom: 10px
+          &.subtitle
+            width: 80px
+            font-family: 'Proxima Nova Regular'
+            color: #010101
+            font-size: 16px
+            font-weight: 300
+            line-height: 28px
+            text-transform: uppercase
+            margin-right: 42px
+            margin-top: 22px
+            margin-bottom: 12px
+            & b
+              background-color: $color-main
+              width: 25px
+              height: 25px
+              text-align: center
+      & span
+        opacity: 0.83
+        color: #020202
+        font-family: 'Proxima Nova Regular'
+        font-size: 18px
+        font-weight: 400
+        line-height: 28px
+        width: 350px
+        margin-bottom: 65px
+  &__read
+    display: flex
+    align-items: center
+    padding: 16px 44px 16px 40px
+    background: $color-main
+    font-family: 'Proxima Nova Regular'
+    color: #020202
+    font-size: 20px
+    font-weight: 400
+    line-height: 28px
+    text-transform: uppercase
+    border: none
+    outline: none
+    cursor: pointer
+.block-news__read
+  display: flex
+  justify-content: center
