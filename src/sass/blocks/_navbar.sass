@@ -1,8 +1,9 @@
 .navbar
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 61%, rgba(241, 241, 241, 0.55) 39%)
   &-block
     display: flex
-    margin-bottom: 5px
-    margin-top: 8px
+    padding-bottom: 5px
+    padding-top: 8px
   &__logo
     display: flex
     flex-direction: column
@@ -64,3 +65,38 @@
     margin: auto
     &:hover
       cursor: pointer
+.burger__menu
+  display: none
+@media (max-width: 1200px)  
+  .navbar
+    &__logo
+      margin-right: 70px
+    &__menu
+      &-list
+        margin-right: 80px
+        width: 350px 
+        & li+li
+          &:before
+            margin-right: 13px
+        & a
+          font-size: 14px
+    &__info
+      flex-direction: column
+    &__contacts
+      font-size: 14px
+      margin: 0px
+    &__button
+      font-size: 12px
+@media (max-width: 768px)
+  .navbar
+    background: #ffffff
+    &__logo
+      margin-right: 40px
+    &__menu
+      display: none
+      &-list
+        margin-right: 50px
+        width: 300px 
+        & li+li
+          &:before
+            content: ''

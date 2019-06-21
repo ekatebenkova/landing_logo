@@ -37,6 +37,7 @@
         & img
           width: 16px
           height: 16px
+          display: flex
       &-vk
         background-color: #fefdfd
         width: 26px
@@ -53,6 +54,7 @@
         & img
           width: 18px
           height: 18px
+          display: flex
       &-ok
         background-color: #fefdfd
         width: 26px
@@ -69,6 +71,7 @@
         & img
           width: 16px
           height: 16px
+          display: flex
     &__mail
       display: flex
       & img
@@ -102,3 +105,48 @@
         font-family: 'Proxima Nova Regular'
         & b
           font-weight: 700
+@media (max-width: 1200px)
+  .footer
+    &-block
+      padding-top: 50px
+      &__address
+        font-size: 14px
+        line-height: 1
+        margin-right: 20px
+        & img
+          margin-right: 5px
+      &__social
+        margin-right: 20px
+      &__mail
+        & img
+          margin-right: 5px
+        & a
+          font-size: 16px
+          line-height: 1
+          &:after
+            content: ''
+            margin-right: 10px
+            margin-left: 10px
+      &__phone
+        & img
+          margin-right: 5px
+        & a
+          font-size: 16px
+          line-height: 1
+          align-self: center
+@media (max-width: 768px)
+  .footer
+    &-block
+      padding-top: 20px
+      &__address
+        width: 130px
+      &__social
+        flex-direction: column
+        margin-right: 10px
+        &-insta
+          margin-bottom: 10px
+        &-vk
+          margin-bottom: 10px
+      &__mail
+        & a
+          margin-right: 5px

@@ -2,7 +2,7 @@
   background: $text-color
   margin-bottom: 145px
   &__button
-    font-family: 'Proxima Nova Regular'
+    font-family: 'Proxima Nova Semibold'
     font-size: 28px
     font-weight: bold
     line-height: 28px
@@ -28,7 +28,7 @@
     font-size: 20px
     font-weight: 400
     line-height: 28px
-    font-family: 'Proxima Nova Regular'
+    font-family: 'Proxima Nova Semibold'
     margin-top: 10px
     margin-bottom: 15px
   & span.text-reviews
@@ -54,3 +54,17 @@
   & img
     position: relative
     display: inline
+@media (max-width: 768px)
+  .reviews
+    margin-bottom: 100px
+    &__button
+      font-size: 24px
+  .slider-reviews
+    margin: 0 -50px
+  .slider-reviews__item
+    margin: 0 50px
+@media (max-width: 567px)
+  .slider-reviews
+    margin: 0 -20px
+  .slider-reviews__item
+    margin: 0 20px

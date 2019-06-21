@@ -1,9 +1,9 @@
 .advantages
-  margin-bottom: 200px
+  margin-bottom: 186px
   &__button
-    font-family: 'Proxima Nova Regular'
+    font-family: 'Proxima Nova Semibold'
     font-size: 28px
-    font-weight: bold
+    font-weight: 400
     line-height: 28px
     text-transform: uppercase
     color: #020202
@@ -22,12 +22,13 @@
       min-width: 670px
       max-width: 670px
       justify-content: space-between
+      align-items: baseline
       &-item
         display: flex
         flex-direction: column
         width: 198px
         height: 168px
-        margin-bottom: 36px
+        margin-bottom: 38px
         padding-top: 16px
         text-align: center
         font-family: 'Proxima Nova Regular'
@@ -57,7 +58,7 @@
         color: #020202
         & li
           color: #020202
-          font-family: 'Proxima Nova Extra Bold'
+          font-family: 'Proxima Nova Semibold'
           padding-bottom: 68px
           display: flex
           &:nth-child(2)
@@ -71,6 +72,7 @@
             content: counter(item) ' ' 
             counter-increment: item
             padding-right: 13px
+            font-family: 'Proxima Nova Black'
             font-size: 35px
             font-weight: 400
             line-height: 25px
@@ -82,3 +84,22 @@
             margin-top: 11px
           & span
             width: 375px
+@media (max-width: 1200px) 
+  .advantages
+    &-block
+      justify-content: center
+      &__services
+        display: none
+@media (max-width: 768px)
+  .advantages
+    margin-bottom: 60px
+    &__button
+      font-size: 24px
+      margin-bottom: 40px
+@media (max-width: 567px)
+  .advantages
+    &-block
+      &__advantages
+        flex-wrap: wrap
+        min-width: 300px
+        max-width: 300px

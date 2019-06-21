@@ -1,11 +1,11 @@
 .hero
   margin-bottom: 130px
+  img
+    max-width: none
 .nav-hero
   &__slider-item
     position: relative
     & img
-      max-height: 100%
-      max-width: 100%
       height: 100%
       width: auto
   &__text
@@ -14,11 +14,11 @@
     bottom: 340px
     font-family: 'Proxima Nova Regular'
     &-a
+      font-family: 'Proxima Nova Semibold'
       font-size: 35px
-      font-weight: 600
+      font-weight: 400
       line-height: 50px
       text-transform: uppercase
-      letter-spacing: 0.7px
       margin-bottom: 0
     &-b
       font-size: 35px
@@ -38,13 +38,16 @@
 .hero__button
   position: absolute
   bottom: 272px
-  padding: 12px 38px 13px 40px
+  padding: 1px 38px 4px 40px
   text-transform: uppercase
-  font-family: 'Proxima Nova Extra Bold'
+  font-family: 'Proxima Nova Semibold'
+  font-size: 18px
+  font-weight: 400
+  line-height: 40px
   background: $color-main
   border: none
   outline: none
-  letter-spacing: 1px
+  cursor: pointer
 .slick-dots
   list-style: none
   display: flex
@@ -59,3 +62,54 @@
     content: url('../img/hero/btn.png')
   li.slick-active
     content: url('../img/hero/btn-active.png')
+@media (max-width: 1200px)  
+  .hero
+    img
+      width: auto
+      height: 100%
+  .nav-hero
+    &__text
+      width: 750px
+      &-c
+        width: 750px
+@media (max-width: 768px)
+  .hero
+    margin-bottom: 100px
+    img
+      max-height: 500px
+  .nav-hero
+    &__text
+      width: 500px
+      bottom: 240px
+      &-a
+        font-size: 25px
+      &-b
+        font-size: 25px
+      &-c
+        font-size: 15px
+        width: 500px
+        margin-bottom: 0
+  .hero__button
+    bottom: 150px
+@media (max-width: 567px)
+  .hero
+    margin-bottom: 50px
+    img
+      max-height: 400px
+  .nav-hero
+    &__text
+      width: 300px
+      bottom: 200px
+      &-a
+        font-size: 20px
+        line-height: 1.1
+      &-b
+        font-size: 20px
+        line-height: 1.1
+      &-c
+        font-size: 14px
+        width: 300px
+        margin-bottom: 0
+        line-height: 1
+  .hero__button
+    bottom: 90px

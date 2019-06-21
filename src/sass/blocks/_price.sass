@@ -1,9 +1,10 @@
 .price
-  margin-bottom: 235px
+  margin-bottom: 139px
+  background-color: rgba(241, 241, 241, 0.55)
   &__button
-    font-family: 'Proxima Nova Regular'
+    font-family: 'Proxima Nova Semibold'
     font-size: 28px
-    font-weight: bold
+    font-weight: 400
     line-height: 28px
     text-transform: uppercase
     color: #020202
@@ -18,6 +19,7 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
+    padding-bottom: 96px
   &__item
     width: 377px
     height: 236px
@@ -74,3 +76,12 @@
         background: $color-menu
         padding: 10px 36px 
         cursor: pointer
+@media (max-width: 768px)
+  .price
+    margin-bottom: 60px
+    &__button
+      font-size: 24px
+      margin-bottom: 50px
+    &-block
+      justify-content: center
+      padding-bottom: 40px

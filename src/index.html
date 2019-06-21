@@ -28,6 +28,21 @@
             <li><a href="#">Контакты</a></li>
           </ul>
         </div>
+        <div class="burger__menu">
+          <div class="burger__menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="burger__menu-list">
+            <li><a href="#" class="burger__menu-item">Услуги</a></li>
+            <li><a href="#" class="burger__menu-item">Цены</a></li>
+            <li><a href="#" class="burger__menu-item">Отзывы</a></li>
+            <li><a href="#" class="burger__menu-item">Новости</a></li>
+            <li><a href="#" class="burger__menu-item">Контакты</a></li>
+          </ul>
+        </div>
         <!-- /.navbar__menu -->
         <div class="navbar__info">
           <div class="navbar__contacts">
@@ -59,7 +74,7 @@
       <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
         <div class="container">
           <div class="nav-hero__text">
-            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-a">Наша бригада по монтированию отопления и сантехники</p>
             <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
             <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
           </div>
@@ -69,7 +84,7 @@
       <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
         <div class="container">
           <div class="nav-hero__text">
-            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-a">Наша бригада по монтированию отопления и сантехники</p>
             <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
             <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
           </div>
@@ -79,7 +94,7 @@
       <div class="nav-hero__slider-item"><img src="img/hero/boiler.jpg" alt="бойлерная">
         <div class="container">
           <div class="nav-hero__text">
-            <p class="nav-hero__text-a">Наша бригада  по монтированию отопления и сантехники</p>
+            <p class="nav-hero__text-a">Наша бригада по монтированию отопления и сантехники</p>
             <p class="nav-hero__text-b">вызов по Москве и Московской области</p>
             <p class="nav-hero__text-c">Наша бригада из 20 человек сделает всё быстро и недорого в самые кратчайшие сроки.Всё что Вам нужно это оставить заявку либо позвонить самому на указанный номер.Всего хорошего.</p>
           </div>
@@ -346,8 +361,8 @@
               <span>оставьте <b>заявку</b></span>
             </div>
             <div class="offer-block__input">
-              <input type="text" placeholder="Введите Ваше имя">
-              <input type="tel" placeholder="Введите Ваш номер телефона">
+              <input type="text" name="username" placeholder="Введите Ваше имя">
+              <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
             </div>
             <button class="offer-button">заказать  звонок</button>
           </div>
@@ -364,18 +379,18 @@
         </div>
         <div class="footer-block__social">
           <div class="footer-block__social-insta">
-              <img src="img/footer/instagram.svg" alt="instagram">
+            <a href="https://www.instagram.com"><img src="img/footer/instagram.svg" alt="instagram"></a>
           </div>
           <div class="footer-block__social-vk">
-              <img src="img/footer/vk.svg" alt="vk">
+            <a href="https://vk.com"><img src="img/footer/vk.svg" alt="vk"></a>
           </div>
           <div class="footer-block__social-ok">
-              <img src="img/footer/odnoklassniki.svg" alt="odnoklassniki">
+            <a href="https://ok.ru"><img src="img/footer/odnoklassniki.svg" alt="odnoklassniki"></a>
           </div>
         </div>
         <div class="footer-block__mail">
           <img src="img/footer/mail.png" alt="mail">
-          <a href="email:infosanteh@gmail.com">infosanteh@gmail.com</a>
+          <a href="mailto:infosanteh@gmail.com">infosanteh@gmail.com</a>
         </div>
         <div class="footer-block__phone">
           <img src="img/footer/phone-receiver.png" alt="phone">
@@ -387,9 +402,14 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/burger.js"></script>
 
   <script>
     $(document).ready(function() {
+      /* Маска для телефона */
+      $('.phone').mask('+7 (999) 999-99-99');
+      /* Скрипт слайдера */
       $('.nav-hero__slider-hero').slick({
         dots: true,
         infinite: true,
@@ -406,7 +426,16 @@
         slidesToShow: 2,
         slidesToScroll: 2,
         prevArrow: ('.btn'),
-        nextArrow: ('.btn')
+        nextArrow: ('.btn'),
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          }
+        ]
       });
     });
   </script>
