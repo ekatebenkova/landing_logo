@@ -205,6 +205,11 @@ img {
 }
 
 @media (max-width: 1200px) {
+  .navbar-block {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .navbar__logo {
     margin-right: 70px;
   }
@@ -249,6 +254,36 @@ img {
   }
   .navbar__menu-list li + li:before {
     content: '';
+  }
+  .navbar__info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .navbar__contacts {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 30px;
+  }
+  .navbar__button {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 567px) {
+  .navbar__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar__contacts {
+    margin-right: 10px;
+  }
+  .navbar__button {
+    margin-right: 20px;
   }
 }
 
@@ -331,6 +366,7 @@ img {
   margin-right: 50%;
   -webkit-transform: translate(-45%, -4%);
           transform: translate(-45%, -4%);
+  cursor: pointer;
 }
 
 .slick-dots li {
@@ -409,6 +445,7 @@ img {
   }
   .hero__button {
     bottom: 90px;
+    font-size: 14px;
   }
 }
 
@@ -538,6 +575,25 @@ img {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 567px) {
+  .price {
+    margin-bottom: 20px;
+  }
+  .price-block {
+    padding-bottom: 10px;
+  }
+  .price__item {
+    margin-bottom: 10px;
+  }
+  .price__item-button {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .price__item-text {
+    font-size: 16px;
   }
 }
 
@@ -704,11 +760,20 @@ img {
 }
 
 @media (max-width: 567px) {
+  .advantages {
+    margin-bottom: 10px;
+  }
   .advantages-block__advantages {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     min-width: 300px;
     max-width: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .advantages-block__advantages-item {
+    margin-bottom: 10px;
   }
 }
 
@@ -798,6 +863,19 @@ img {
   display: inline;
 }
 
+.slick-slide img {
+  display: inline;
+}
+
+@media (max-width: 992px) {
+  .slider-reviews {
+    margin: 0 -20px;
+  }
+  .slider-reviews__item {
+    margin: 0 70px;
+  }
+}
+
 @media (max-width: 768px) {
   .reviews {
     margin-bottom: 100px;
@@ -815,10 +893,25 @@ img {
 
 @media (max-width: 567px) {
   .slider-reviews {
-    margin: 0 -20px;
+    margin: 0 -10px;
   }
   .slider-reviews__item {
-    margin: 0 20px;
+    margin: 0 10px;
+  }
+  .slider-reviews__item p {
+    font-size: 16px;
+  }
+  .slider-reviews__item span.text-reviews {
+    font-size: 16px;
+  }
+  .slider-reviews__item-like {
+    margin-bottom: 100px;
+  }
+  .reviews {
+    margin-bottom: 50px;
+  }
+  .reviews__button {
+    margin-bottom: 50px;
   }
 }
 
@@ -976,6 +1069,31 @@ img {
   }
 }
 
+@media (max-width: 567px) {
+  .news-block__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .news-block__item img {
+    max-width: 90%;
+  }
+  .news-block__item span {
+    width: 300px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 30px;
+  }
+  .news-block__item-text p.subtitle {
+    margin-right: 10px;
+  }
+  .news__read {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
 .map {
   height: 666px;
 }
@@ -1077,6 +1195,43 @@ img {
     font-size: 16px;
     margin-top: 35px;
     padding: 15px 57px 15px 54px;
+  }
+}
+
+@media (max-width: 567px) {
+  .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .map-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0;
+  }
+  .map-block iframe {
+    position: initial;
+    height: 300px;
+  }
+  .offer-block {
+    top: -330px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+    width: 300px;
+    padding-top: 5px;
   }
 }
 
@@ -1346,31 +1501,67 @@ img {
   }
 }
 
-.burger__menu {
-  display: none;
-  font-family: 'Proxima Nova Regular';
-  background-color: #f1f1f1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (max-width: 567px) {
+  .footer-block {
+    padding-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-block__address {
+    width: 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-block__social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-block__social-ok {
+    margin-bottom: 10px;
+  }
+  .footer-block__mail {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-block__phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.burger__menu-list {
-  list-style: none;
-  padding-left: 0;
+.burger__menu {
+  display: none;
+  text-align: right;
 }
 
 .burger__menu-item {
   display: inline-block;
-  color: #010101;
-  font-size: 14px;
+  color: #030303;
+  font-family: 'Proxima Nova Regular';
+  font-size: 16px;
   line-height: 30px;
   padding: 0 10px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.burger__menu-item:hover {
+  text-decoration: underline;
 }
 
 .burger__menu-icon {
@@ -1384,7 +1575,7 @@ img {
 .burger__menu-icon span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 5px;
   width: 100%;
   background: #333333;
   border-radius: 9px;
@@ -1414,12 +1605,15 @@ img {
 @media (max-width: 768px) {
   .burger__menu {
     display: inline;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .burger__menu-icon {
     display: inline-block;
   }
-  .burger__menu-list {
-    position: fixed;
+  .burger__menu-links {
+    position: absolute;
     display: block;
     top: 0;
     right: 0;
@@ -1454,8 +1648,76 @@ img {
     width: 0%;
     left: 50%;
   }
-  .burger__menu.menu-open .burger__menu-list {
+  .burger__menu.menu-open .burger__menu-links {
     opacity: 1;
   }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 300px;
+  width: 90%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-dialog__input {
+  font-size: 14px;
+  font-family: 'Proxima Nova Italic';
+  font-style: italic;
+  width: 100%;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.modal-dialog__input input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+  width: 100%;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-button {
+  background: #ffc800;
+  font-family: 'Proxima Nova Regular';
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -72,3 +72,22 @@
       font-size: 16px
       margin-top: 35px
       padding: 15px 57px 15px 54px
+@media (max-width: 567px)
+  .map
+    display: flex
+    flex-direction: column-reverse
+    &-block
+      display: flex
+      flex-direction: column-reverse
+      margin: 0
+      & iframe
+        position: initial
+        height: 300px
+  .offer
+    &-block
+      top: -330px
+      box-shadow: none
+      justify-content: center
+      margin: auto
+      width: 300px
+      padding-top: 5px

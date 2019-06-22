@@ -7,6 +7,9 @@
   <title>LOGO</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate/_base.css">
+  <link rel="stylesheet" href="css/animate/fading_entrances/fadeInUp.css">  
+  <link rel="stylesheet" href="css/animate/fading_entrances/fadeInLeft.css"> 
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
@@ -21,26 +24,11 @@
         <!-- /.navbar__logo -->
         <div class="navbar__menu">
           <ul class="navbar__menu-list">
-            <li><a href="#">Услуги</a></li>
-            <li><a href="#">Цены</a></li>
-            <li><a href="#">Отзывы</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="burger__menu">
-          <div class="burger__menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul class="burger__menu-list">
-            <li><a href="#" class="burger__menu-item">Услуги</a></li>
-            <li><a href="#" class="burger__menu-item">Цены</a></li>
-            <li><a href="#" class="burger__menu-item">Отзывы</a></li>
-            <li><a href="#" class="burger__menu-item">Новости</a></li>
-            <li><a href="#" class="burger__menu-item">Контакты</a></li>
+            <li><a href="#price">Услуги</a></li>
+            <li><a href="#price">Цены</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#news">Новости</a></li>
+            <li><a href="#contacts">Контакты</a></li>
           </ul>
         </div>
         <!-- /.navbar__menu -->
@@ -51,6 +39,22 @@
           </div>
           <!-- /.navbar__contacts -->
           <button class="button navbar__button" id="button">Заказать звонок</button>
+        </div>
+
+        <div class="burger__menu">
+          <div class="burger__menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="burger__menu-links">
+            <a href="#price" class="burger__menu-item">Услуги</a>
+            <a href="#price" class="burger__menu-item">Цены</a>
+            <a href="#reviews" class="burger__menu-item">Отзывы</a>
+            <a href="#news" class="burger__menu-item">Новости</a>
+            <a href="#contacts" class="burger__menu-item">Контакты</a>
+          </div>
         </div>
       </div>
       <!-- /.navbar-block -->
@@ -106,7 +110,7 @@
 
   <section class="section price">
     <div class="container">
-      <button class="button price__button">услуги</button>
+      <button class="button price__button"><a name="price">услуги</a></button>
       <div class="price-block">
         <div class="price__item default">
           <img src="img/price/heating-system.jpg" alt="монтаж систем отопления">
@@ -171,32 +175,32 @@
       <button class="button advantages__button">почему мы?</button>
       <div class="advantages-block">
         <div class="advantages-block__advantages">
-          <div class="advantages-block__advantages-item">
-            <img src="img/advantages/warranty.png" alt="гарантия">
+          <div class="advantages-block__advantages-item wow fadeInUp">
+            <img src="img/advantages/warranty.png" alt="гарантия" data-wow-delay="0.1s">
             <span>100 % гарантия качества</span>
           </div>
-          <div class="advantages-block__advantages-item">
-            <img src="img/advantages/diagram.png" alt="диаграмма">
+          <div class="advantages-block__advantages-item wow fadeInUp">
+            <img src="img/advantages/diagram.png" alt="диаграмма" data-wow-delay="0.2s">
             <span>с нами выгодно</span>
           </div>
-          <div class="advantages-block__advantages-item">
+          <div class="advantages-block__advantages-item wow fadeInUp" data-wow-delay="0.3s">
             <img src="img/advantages/trophy.png" alt="кубок">
             <span>большой опыт</span>
           </div>
-          <div class="advantages-block__advantages-item">
+          <div class="advantages-block__advantages-item wow fadeInUp" data-wow-delay="0.4s">
             <img src="img/advantages/operator.png" alt="оператор">
             <span>быстрая онлайн поддержка</span>
           </div>
-          <div class="advantages-block__advantages-item">
+          <div class="advantages-block__advantages-item wow fadeInUp" data-wow-delay="0.5s">
             <img src="img/advantages/care.png" alt="забота">
             <span>с заботой о клиенте</span>
           </div>
-          <div class="advantages-block__advantages-item">
+          <div class="advantages-block__advantages-item wow fadeInUp" data-wow-delay="0.6s">
             <img src="img/advantages/calendar.png" alt="календарь">
             <span>точно в срок</span>
           </div>
         </div>
-        <div class="advantages-block__services">
+        <div class="advantages-block__services wow fadeInLeft" data-wow-delay="0.6s">
           <ol class="advantages-block__services-list">
             <li><img src="img/advantages/line_1.png" alt="линия"><span>Вызов бригады на следующий день после звонка</span></li>
             <li><img src="img/advantages/line_1.png" alt="линия"><span>Вся бригада имеет специальное образование</span></li>
@@ -212,7 +216,7 @@
 
   <section class="section reviews">
     <div class="container">
-      <button class="button reviews__button">отзывы</button>
+      <button class="button reviews__button"><a name="reviews">отзывы</a></button>
       <div class="slider-reviews">
         <div class="slider-reviews__item">
           <img class="girl" src="img/reviews/girl.png" alt="girl">
@@ -318,7 +322,7 @@
 
   <section class="section news">
     <div class="container">
-      <button class="button news__button">новости</button>
+      <button class="button news__button"><a name="news">новости</a></button>
         <div class="news-block">
           <div class="news-block__item">
             <img src="img/news/repair-1.jpg" alt="repair">
@@ -354,19 +358,21 @@
 
   <div class="map" id="map">
     <div class="map-block">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.68520106764!2d37.76560901605791!3d55.798703980565634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534dc29e2933b%3A0x1b6807b3515ab952!2z0KHQvtCy0LXRgtGB0LrQsNGPINGD0LsuLCA0OCwg0JzQvtGB0LrQstCwLCAxMDUwMzc!5e0!3m2!1sru!2sru!4v1561021156848!5m2!1sru!2sru" width="100%" height="666" frameborder="0" style="border:0; filter: grayscale(100%); position: absolute" allowfullscreen></iframe>
-        <div class="container">
-          <div class="offer-block">
-            <div class="offer-block__title">
-              <span>оставьте <b>заявку</b></span>
-            </div>
-            <div class="offer-block__input">
-              <input type="text" name="username" placeholder="Введите Ваше имя">
-              <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
-            </div>
-            <button class="offer-button">заказать  звонок</button>
+      <script></script>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.68520106764!2d37.76560901605791!3d55.798703980565634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534dc29e2933b%3A0x1b6807b3515ab952!2z0KHQvtCy0LXRgtGB0LrQsNGPINGD0LsuLCA0OCwg0JzQvtGB0LrQstCwLCAxMDUwMzc!5e0!3m2!1sru!2sru!4v1561021156848!5m2!1sru!2sru" width="100%" height="666" frameborder="0" style="border:0; filter: grayscale(100%); position: absolute" allowfullscreen></iframe>  
+      <div class="container">
+        <div class="offer-block">
+          <div class="offer-block__title">
+            <span>оставьте <b>заявку</b></span>
           </div>
+          <div class="offer-block__input" id="offer-form">
+            <input type="text" name="username" placeholder="Введите Ваше имя">
+            <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
+          </div>
+          <button class="button offer-button" id="button">заказать  звонок</button>
         </div>
+        <div class="success"></div>
+      </div>
     </div>
   </div>
 
@@ -394,19 +400,51 @@
         </div>
         <div class="footer-block__phone">
           <img src="img/footer/phone-receiver.png" alt="phone">
-          <a href="tel:+7(863)342-22-21">+7 (863) <b class="footer-block__phone-bold">342-22-21</b></a>
+          <a name="contacts" href="tel:+7(863)342-22-21">+7 (863) <b class="footer-block__phone-bold">342-22-21</b></a>
         </div>
       </div>
     </div>
   </footer>
 
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times;</button>
+      <div class="modal-dialog__input">
+        <input type="text" name="username" placeholder="Введите Ваше имя">
+        <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
+      </div>
+      <button class="button modal-button" id="button">отправить</button>
+    </div>
+    <div class="success"></div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/burger.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/wow.min.js"></script>
+
 
   <script>
+    /* Инициализация анимации WOW.js */
+    new WOW().init();
+
     $(document).ready(function() {
+      /* Обработка и отправка формы через Ajax */
+      $('#modal').on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+          url: 'mail.php',
+          type: 'POST',
+          data: $(this).serialize(),
+          success: function(data) {
+            $('.success').html('Ваша форма отправлена!');
+          }
+        });
+      });
       /* Маска для телефона */
       $('.phone').mask('+7 (999) 999-99-99');
       /* Скрипт слайдера */
@@ -414,7 +452,9 @@
         dots: true,
         infinite: true,
         prevArrow: ('.btn'),
-        nextArrow: ('.btn')
+        nextArrow: ('.btn'),
+        autoplay: true,
+        autoplaySpeed: 2000,
       });
     });
   </script>
@@ -429,7 +469,7 @@
         nextArrow: ('.btn'),
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 992,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,

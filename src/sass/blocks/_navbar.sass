@@ -69,6 +69,8 @@
   display: none
 @media (max-width: 1200px)  
   .navbar
+    &-block
+      justify-content: space-between
     &__logo
       margin-right: 70px
     &__menu
@@ -100,3 +102,18 @@
         & li+li
           &:before
             content: ''
+    &__info
+      flex-direction: row
+    &__contacts
+      align-self: center
+      margin-right: 30px
+    &__button
+      margin-right: 30px
+@media (max-width: 567px)
+  .navbar
+    &__info
+      flex-direction: column
+    &__contacts
+      margin-right: 10px
+    &__button
+      margin-right: 20px
