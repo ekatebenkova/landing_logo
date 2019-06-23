@@ -26,11 +26,15 @@
     position: relative
     margin-bottom: 21px
     & img
-      -webkit-filter: grayscale(100%)
-      filter: grayscale(100%)
-      &:hover
-        -webkit-filter: grayscale(0)
-        filter: grayscale(0)
+      &.default
+        -webkit-filter: grayscale(100%)
+        filter: grayscale(100%)
+      &.active
+        display: none
+      &:hover .default
+        display: none
+      &:hover .active
+        display: inline  
     & .active
       display: none
     &:hover .default

@@ -489,14 +489,21 @@ img {
   margin-bottom: 21px;
 }
 
-.price__item img {
+.price__item img.default {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
-.price__item img:hover {
-  -webkit-filter: grayscale(0);
-  filter: grayscale(0);
+.price__item img.active {
+  display: none;
+}
+
+.price__item img:hover .default {
+  display: none;
+}
+
+.price__item img:hover .active {
+  display: inline;
 }
 
 .price__item .active {
@@ -598,7 +605,21 @@ img {
 }
 
 .advantages {
-  margin-bottom: 186px;
+  background: rgba(241, 241, 241, 0.55);
+  background-position: center left;
+  background-size: contain;
+  position: relative;
+  margin-bottom: 106px;
+}
+
+.advantages:before {
+  content: '';
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .advantages__button {
@@ -621,6 +642,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  padding-bottom: 80px;
 }
 
 .advantages-block__advantages {
@@ -657,6 +680,7 @@ img {
   font-weight: 400;
   line-height: 23px;
   text-transform: uppercase;
+  background-color: #ffffff;
 }
 
 .advantages-block__advantages-item img {
@@ -739,6 +763,13 @@ img {
 }
 
 @media (max-width: 1200px) {
+  .advantages {
+    background: rgba(241, 241, 241, 0.55);
+    background-size: cover;
+  }
+  .advantages:before {
+    display: none;
+  }
   .advantages-block {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

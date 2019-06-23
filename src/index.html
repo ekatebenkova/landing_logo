@@ -113,7 +113,8 @@
       <button class="button price__button"><a name="price">услуги</a></button>
       <div class="price-block">
         <div class="price__item default">
-          <img src="img/price/heating-system.jpg" alt="монтаж систем отопления">
+          <img class="default" src="img/price/heating-system.jpg" alt="монтаж систем отопления">
+          <img class="active" src="img/price/heating-system.jpg" alt="монтаж систем отопления">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж систем <br> отопления</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -122,7 +123,8 @@
           <button class="button price__item-button active">от 500 р.</button>
         </div>
         <div class="price__item">
-          <img src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
+          <img class="default" src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
+          <img class="active" src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж сантехнического <br> оборудования</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -131,7 +133,8 @@
           <button class="button price__item-button active">от 500 р.</button>
         </div>
         <div class="price__item">
-          <img src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
+          <img class="default" src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
+          <img class="active" src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж канализационного <br> оборудования</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -140,7 +143,8 @@
           <button class="button price__item-button active">от 500 р.</button>
         </div>
         <div class="price__item">
-          <img src="img/price/heating-system.jpg" alt="монтаж систем отопления">
+          <img class="default" src="img/price/heating-system.jpg" alt="монтаж систем отопления">
+          <img class="active" src="img/price/heating-system.jpg" alt="монтаж систем отопления">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж систем <br> отопления</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -149,7 +153,8 @@
           <button class="button price__item-button active">от 500 р.</button>
         </div>
         <div class="price__item">
-          <img src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
+          <img class="default" src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
+          <img class="active" src="img/price/plumbing.jpg" alt="Монтаж сантехнического оборудования">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж сантехнического <br> оборудования</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -158,7 +163,8 @@
           <button class="button price__item-button active">от 500 р.</button>
         </div>
         <div class="price__item">
-          <img src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
+          <img class="default" src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
+          <img class="active" src="img/price/sewage.jpg" alt="Монтаж канализационного оборудования">
           <div class="price__item-text">
             <p class="price__item-text default">Монтаж канализационного <br> оборудования</p>
             <p class="price__item-text active">Здесь будет короткое описание <br> о данной услуге</p>
@@ -362,14 +368,16 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.68520106764!2d37.76560901605791!3d55.798703980565634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534dc29e2933b%3A0x1b6807b3515ab952!2z0KHQvtCy0LXRgtGB0LrQsNGPINGD0LsuLCA0OCwg0JzQvtGB0LrQstCwLCAxMDUwMzc!5e0!3m2!1sru!2sru!4v1561021156848!5m2!1sru!2sru" width="100%" height="666" frameborder="0" style="border:0; filter: grayscale(100%); position: absolute" allowfullscreen></iframe>  
       <div class="container">
         <div class="offer-block">
-          <div class="offer-block__title">
-            <span>оставьте <b>заявку</b></span>
-          </div>
-          <div class="offer-block__input" id="offer-form">
-            <input type="text" name="username" placeholder="Введите Ваше имя">
-            <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
-          </div>
-          <button class="button offer-button" id="button">заказать  звонок</button>
+          <form action="php/smart.php" method="POST" class="ajax-form" id="offer-form">
+            <div class="offer-block__title">
+              <span>оставьте <b>заявку</b></span>
+            </div>
+            <div class="offer-block__input" id="offer-form">
+              <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
+              <input type="tel" name="phone" id="phone" class="input phone" placeholder="Введите Ваш номер телефона">
+            </div>
+            <button type="submit" class="button offer-button" id="button">заказать  звонок</button>
+          </form>
         </div>
         <div class="success"></div>
       </div>
@@ -406,18 +414,20 @@
     </div>
   </footer>
 
-  <div class="modal" id="modal">
-    <div class="modal-dialog">
-      <button class="modal-dialog__close" id="close">&times;</button>
-      <div class="modal-dialog__input">
-        <input type="text" name="username" placeholder="Введите Ваше имя">
-        <input type="tel" name="phone" class="input phone" placeholder="Введите Ваш номер телефона">
+ <!-- <form action="action" method="POST" id="modal">-->
+    <form action="php/smart.php" method="POST" class="modal ajax-form" id="modal">
+      <div class="modal-dialog">
+        <button class="modal-dialog__close" id="close">&times;</button>
+        <div class="modal-dialog__input">
+          <input type="text" name="name" id="name" placeholder="Введите Ваше имя">
+          <input type="tel" name="phone" id="phone" class="input phone" placeholder="Введите Ваш номер телефона">
+        </div>
+        <button type="submit" class="button modal-button" id="button">отправить</button>
       </div>
-      <button class="button modal-button" id="button">отправить</button>
-    </div>
+  <!--  </form> -->
     <div class="success"></div>
     <!-- /.modal-dialog -->
-  </div>
+    </form>
   <!-- /.modal -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -426,25 +436,87 @@
   <script src="js/burger.js"></script>
   <script src="js/modal.js"></script>
   <script src="js/wow.min.js"></script>
-
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/ajax.js"></script>
 
   <script>
     /* Инициализация анимации WOW.js */
     new WOW().init();
 
     $(document).ready(function() {
+
       /* Обработка и отправка формы через Ajax */
-      $('#modal').on('submit', function(event) {
+    /*  $('#modal').on('submit', function(event) {
         event.preventDefault();
         $.ajax({
           url: 'mail.php',
           type: 'POST',
           data: $(this).serialize(),
           success: function(data) {
-            $('.success').html('Ваша форма отправлена!');
+            $('.success').text('Ваша форма отправлена!');
           }
         });
       });
+
+      $('#offer-form').on('submit', function(event) {
+        event.preventDefault();
+        $.ajax({
+          url: 'mail.php',
+          type: 'POST',
+          data: $(this).serialize(),
+          success: function(data) {
+            $('.success').text('Ваша форма отправлена!');
+          }
+        });
+      });  */
+
+      /* Валидация формы */
+  /*    $('#offer-form').validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Заполните поле Имя",
+            minlength: jQuery.validator.format("Минимальная длина поля 2 символа"),
+            maxlength: jQuery.validator.format("Максимальная длина поля 15 символов")
+          },
+          phone: {
+            required: "Заполните поле телефон"
+          }
+        }
+      });
+
+      $('#modal').validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Заполните поле Имя",
+            minlength: jQuery.validator.format("Минимальная длина поля 2 символа"),
+            maxlength: jQuery.validator.format("Максимальная длина поля 15 символов")
+          },
+          phone: {
+            required: "Заполните поле телефон"
+          }
+        }
+      }); */
+  
       /* Маска для телефона */
       $('.phone').mask('+7 (999) 999-99-99');
       /* Скрипт слайдера */
